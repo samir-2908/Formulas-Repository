@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulas Repository</title>
+    <meta name="description" content="Your one-stop destination for Physics, Chemistry, and Math formulas. Find the formulas you need, all in one place.">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -64,7 +65,7 @@
             transition: background-color 0.3s ease;
         }
         .button:hover {
-            background-color: #000000;
+            background-color: #0c47a1;
         }
         footer {
             background-color: #1a73e8;
@@ -78,6 +79,7 @@
         footer a {
             color: white;
             text-decoration: underline;
+            rel="noopener noreferrer";
         }
         .fixed-ad {
             position: fixed;
@@ -89,6 +91,16 @@
             padding: 1rem;
             background: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            .fixed-ad {
+                position: relative;
+                margin: 20px auto;
+                top: auto;
+                left: auto;
+                transform: none;
+                width: 90%;
+            }
         }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9028889920072565"
@@ -124,7 +136,7 @@
     </div>
     <footer>
         <p>&copy; 2024 Formulas Repository</p>
-        <p>Feedback and suggestions? Join our <a href="https://discord.gg/7NhttJdyeC" target="_blank">Discord server</a>.</p>
+        <p>Feedback and suggestions? Join our <a href="https://discord.gg/7NhttJdyeC" target="_blank" rel="noopener noreferrer">Discord server</a>.</p>
     </footer>
     <script>
         // Disable text selection
@@ -158,9 +170,8 @@
         });
     
         function askAdminLogin() {
-            const adminPassword = "CRUISE_2908i"; // Replace with your actual admin password
             const userPassword = prompt("Enter admin password to print this page:");
-            if (userPassword === adminPassword) {
+            if (userPassword === "CRUISE_2908i") { // Replace with your actual admin password
                 alert("Login successful. You can now print the page.");
                 window.print();
             } else {
