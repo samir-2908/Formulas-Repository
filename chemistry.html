@@ -26,7 +26,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 1rem 0; /* Reduced margin for better spacing */
     flex-wrap: wrap; /* Allows nav items to wrap on smaller screens */
 }
 
@@ -34,7 +34,7 @@ nav a {
     text-decoration: none;
     color: white;
     background-color: #4CAF50;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem; /* Reduced padding for better mobile spacing */
     margin: 0.5rem; /* Adjusted margin for better mobile spacing */
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -47,9 +47,9 @@ nav a:hover {
 .container {
     flex: 1;
     padding: 2rem;
-    max-width: 1000px; /* Adjusted max-width */
+    max-width: 100%; /* Set max-width to full for better responsiveness */
     margin: 0 auto;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Include padding in width */
 }
 
 .formula {
@@ -59,6 +59,7 @@ nav a:hover {
 h2 {
     border-bottom: 2px solid #4CAF50;
     padding-bottom: 0.5rem;
+    font-size: 2rem; /* Use responsive font size */
 }
 
 footer {
@@ -71,8 +72,8 @@ footer {
 #search {
     margin-bottom: 1rem;
     padding: 0.5rem;
-    width: 100%;
-    max-width: 500px; /* Keeps the input responsive */
+    width: 100%; /* Full width for better accessibility */
+    max-width: 90%; /* Responsive width */
     border: 1px solid #ddd;
     box-sizing: border-box;
 }
@@ -91,63 +92,58 @@ footer {
     text-align: center;
 }
 
-/* Media Query for better mobile responsiveness */
+/* Media Query for responsive adjustments */
 @media (max-width: 768px) {
     body {
-        font-size: 16px; /* Ensures text size is readable on small screens */
+        font-size: 16px; /* Adjust base font size for mobile */
     }
-    
+
     nav a {
-        padding: 0.8rem 1rem; /* Reduce padding for smaller screens */
-        font-size: 14px; /* Smaller text for nav links on mobile */
+        padding: 0.5rem 1rem; /* Smaller padding for mobile */
+        font-size: 14px; /* Smaller font size for nav links */
     }
 
     header, footer {
-        padding: 0.8rem; /* Adjust padding for smaller screens */
+        padding: 0.8rem; /* Adjust header/footer padding for smaller screens */
     }
 
     h2 {
-        font-size: 1.4rem; /* Adjust heading size for better readability */
+        font-size: 1.5rem; /* Smaller heading for mobile */
     }
 
     .container {
-        padding: 1rem; /* Less padding on smaller screens */
+        padding: 1rem; /* Less padding on smaller devices */
     }
 
     #search {
         padding: 0.5rem;
-        font-size: 16px;
-        max-width: 90%; /* Ensures search bar fits within the screen */
-    }
-
-    footer p {
-        font-size: 14px; /* Make footer text smaller for mobile */
+        font-size: 16px; /* Make search input larger */
+        max-width: 90%; /* Keep search input responsive */
     }
 }
 
-/* Media Query for very small mobile devices */
+/* Additional Media Query for very small devices */
 @media (max-width: 480px) {
     nav a {
-        padding: 0.7rem 0.8rem;
-        font-size: 12px; /* Smaller nav links for small mobile devices */
-        margin: 0.2rem; /* Adjust margin for tight mobile space */
+        padding: 0.5rem 0.8rem; /* Further reduced padding */
+        font-size: 12px; /* Smaller font size for very small devices */
     }
 
     h2 {
-        font-size: 1.2rem; /* Smaller heading for compact screens */
+        font-size: 1.2rem; /* Smaller heading for very small screens */
     }
 
     .container {
-        padding: 0.8rem; /* Further reduced padding for very small devices */
+        padding: 0.8rem; /* Reduced padding for very small devices */
     }
 
     #search {
-        font-size: 14px;
-        max-width: 95%; /* Makes search input fit within mobile view */
+        font-size: 14px; /* Smaller search input font size */
+        max-width: 95%; /* Responsive search input */
     }
 
     footer p {
-        font-size: 12px; /* Small text in footer for better mobile display */
+        font-size: 12px; /* Smaller footer text */
     }
 }
     </style>
