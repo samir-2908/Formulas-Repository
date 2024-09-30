@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ9L314LVP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ9L314LVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-DZ9L314LVP');
+    </script>
 
-  gtag('config', 'G-DZ9L314LVP');
-</script>
+    <!-- Google AdSense Meta -->
+    <meta name="google-adsense-account" content="ca-pub-9028889920072565">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulas Repository</title>
@@ -153,21 +157,19 @@
         document.addEventListener('selectstart', function(e) {
             e.preventDefault();
         });
-    
 
-    
         // Disable copying
         document.addEventListener('copy', function(e) {
             e.preventDefault();
         });
-    
+
         // Prevent screenshot by preventing developer tools (basic protection)
         document.addEventListener('keydown', function(e) {
             if (e.key === 'PrintScreen') {
                 e.preventDefault();
             }
         });
-    
+
         // Disable printing (Ctrl + P) and ask for admin login
         document.addEventListener('keydown', function(e) {
             if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
@@ -175,7 +177,7 @@
                 askAdminLogin();
             }
         });
-    
+
         function askAdminLogin() {
             const userPassword = prompt("Enter admin password to print this page:");
             if (userPassword === "CRUISE_2908i") { // Replace with your actual admin password
